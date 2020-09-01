@@ -1,7 +1,7 @@
 {
-    "name": "milon/barcode",
+    "name": "mikealmond/barcode",
     "description": "Barcode generator like Qr Code , PDF417,C39, C39+,C39E,C39E+,C93,S25,S25+,I25,I25+,C128,C128A,C128B,C128C,2-Digits UPC-Based Extention,5-Digits UPC-Based Extention,EAN 8,EAN 13,UPC-A,UPC-E,MSI (Variation of Plessey code) ",
-    "keywords": ["barcode", "laravel","qrcode","QR Code","PDF417","Datamatrix","CODE 39","CODE 128","EAN","CODABAR"],
+    "keywords": ["barcode","qrcode","QR Code","PDF417","Datamatrix","CODE 39","CODE 128","EAN","CODABAR"],
     "license": "LGPL-3.0",
     "authors": [
         {
@@ -10,8 +10,12 @@
         }
     ],
     "require": {
-        "php": ">=5.6.0",
-        "illuminate/support": "^7.0"
+        "php": ">=7.4",
+        "statamic/stringy": "^3.1",
+
+    },
+    "suggest": {
+        "ext-gd": "For the ability to save images"
     },
     "autoload": {
         "psr-0": {
@@ -21,16 +25,5 @@
     "minimum-stability": "stable",
     "config": {
         "sort-packages": true
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Milon\\Barcode\\BarcodeServiceProvider"
-            ],
-            "aliases": {
-                "DNS1D": "Milon\\Barcode\\Facades\\DNS1DFacade",
-                "DNS2D": "Milon\\Barcode\\Facades\\DNS2DFacade"
-            }
-        }
     }
 }
